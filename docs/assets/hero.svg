@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12303f"/>
+      <stop offset="1" stop-color="#2a9d8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="340" fill="url(#bg)"/>
+
+  <!-- app icon: dumbbell over a wave, white -->
+  <g transform="translate(78,86) scale(0.32)">
+    <g fill="#ffffff">
+      <rect x="150" y="196" width="46" height="104" rx="18"/>
+      <rect x="196" y="212" width="26" height="72" rx="12"/>
+      <rect x="216" y="234" width="80" height="28" rx="14"/>
+      <rect x="290" y="212" width="26" height="72" rx="12"/>
+      <rect x="316" y="196" width="46" height="104" rx="18"/>
+    </g>
+    <path d="M108 372 c30 -40 60 -40 90 0 s60 40 90 0 s60 -40 90 0" stroke="#ffffff" stroke-width="22" stroke-linecap="round" fill="none" opacity="0.9"/>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text x="250" y="150" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="1">BuffDad</text>
+  <text x="254" y="196" font-size="27" fill="#e8f4f8">A gym companion I built for my dad — form guidance, one-tap logging,</text>
+  <text x="254" y="230" font-size="27" fill="#e8f4f8">and a private coaching loop, all in a phone-native PWA.</text>
+
+  <!-- tech badges -->
+  <g font-size="19" font-weight="700" fill="#12303f">
+    <g transform="translate(254,262)">
+      <rect width="118" height="38" rx="19" fill="#fdf6e3"/><text x="59" y="25" text-anchor="middle">TypeScript</text>
+    </g>
+    <g transform="translate(384,262)">
+      <rect width="88" height="38" rx="19" fill="#fdf6e3"/><text x="44" y="25" text-anchor="middle">React</text>
+    </g>
+    <g transform="translate(484,262)">
+      <rect width="84" height="38" rx="19" fill="#fdf6e3"/><text x="42" y="25" text-anchor="middle">Hono</text>
+    </g>
+    <g transform="translate(580,262)">
+      <rect width="98" height="38" rx="19" fill="#fdf6e3"/><text x="49" y="25" text-anchor="middle">SQLite</text>
+    </g>
+    <g transform="translate(690,262)">
+      <rect width="78" height="38" rx="19" fill="#fdf6e3"/><text x="39" y="25" text-anchor="middle">PWA</text>
+    </g>
+    <g transform="translate(780,262)">
+      <rect width="94" height="38" rx="19" fill="#fdf6e3"/><text x="47" y="25" text-anchor="middle">Fly.io</text>
+    </g>
+    <g transform="translate(886,262)">
+      <rect width="130" height="38" rx="19" fill="#fdf6e3"/><text x="65" y="25" text-anchor="middle">Web Push</text>
+    </g>
+  </g>
+
+  <!-- decorative waves, right -->
+  <g stroke="#ffffff" stroke-width="4" fill="none" opacity="0.18" stroke-linecap="round">
+    <path d="M1120 70 q28 -24 56 0"/>
+    <path d="M1096 96 q40 -32 80 0"/>
+    <path d="M1064 128 q56 -44 112 0"/>
+  </g>
+</svg>

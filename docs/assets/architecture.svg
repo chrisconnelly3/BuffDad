@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4a6878"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2a9d8f"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="500" fill="#ffffff"/>
+
+  <!-- Dad device -->
+  <rect x="40" y="70" width="220" height="150" rx="18" fill="#e8f4f8" stroke="#1a3c50" stroke-width="2.5"/>
+  <text x="60" y="102" font-size="17" font-weight="800" fill="#1a3c50">Dad’s app</text>
+  <text x="60" y="126" font-size="12.5" fill="#4a6878">PWA · added to home screen</text>
+  <text x="60" y="148" font-size="12.5" font-weight="700" fill="#1d7268">/d/‹secret token›</text>
+  <text x="60" y="172" font-size="12.5" fill="#4a6878">service worker + offline</text>
+  <text x="60" y="190" font-size="12.5" fill="#4a6878">workout queue (localStorage)</text>
+
+  <!-- Coach device -->
+  <rect x="40" y="290" width="220" height="130" rx="18" fill="#e8f4f8" stroke="#1a3c50" stroke-width="2.5"/>
+  <text x="60" y="322" font-size="17" font-weight="800" fill="#1a3c50">Coach console</text>
+  <text x="60" y="346" font-size="12.5" fill="#4a6878">private review + reply</text>
+  <text x="60" y="368" font-size="12.5" font-weight="700" fill="#1d7268">/coach/‹secret token›</text>
+  <text x="60" y="392" font-size="12.5" fill="#4a6878">(dad never sees this URL)</text>
+
+  <!-- Fly container -->
+  <rect x="420" y="60" width="320" height="380" rx="20" fill="#fdf6e3" stroke="#e8d9b5" stroke-width="2.5"/>
+  <text x="440" y="92" font-size="15" font-weight="800" fill="#1a3c50">Fly.io · single machine</text>
+  <text x="440" y="112" font-size="12" fill="#4a6878">auto-stop / auto-start, scales to zero</text>
+
+  <!-- Hono -->
+  <rect x="445" y="135" width="270" height="150" rx="14" fill="#ffffff" stroke="#2a9d8f" stroke-width="2.5"/>
+  <text x="465" y="166" font-size="16" font-weight="800" fill="#1a3c50">Hono (Node) server</text>
+  <text x="465" y="190" font-size="12.5" fill="#4a6878">• serves the React SPA</text>
+  <text x="465" y="210" font-size="12.5" fill="#4a6878">• JSON API + token role gate</text>
+  <text x="465" y="230" font-size="12.5" fill="#4a6878">• idempotent workout writes</text>
+  <text x="465" y="250" font-size="12.5" fill="#4a6878">• web-push sender</text>
+  <text x="465" y="270" font-size="12.5" fill="#4a6878">• members-only 404 everywhere else</text>
+
+  <!-- SQLite -->
+  <rect x="445" y="310" width="270" height="105" rx="14" fill="#ffffff" stroke="#1a3c50" stroke-width="2.5"/>
+  <text x="465" y="340" font-size="16" font-weight="800" fill="#1a3c50">SQLite · better-sqlite3</text>
+  <text x="465" y="364" font-size="12.5" fill="#4a6878">workouts · sets · messages · subs</text>
+  <text x="465" y="386" font-size="12.5" fill="#4a6878">on a persistent Fly volume (WAL)</text>
+
+  <!-- Web Push -->
+  <rect x="790" y="150" width="180" height="110" rx="16" fill="#2a9d8f"/>
+  <text x="880" y="200" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Web Push</text>
+  <text x="880" y="224" font-size="12.5" fill="#e8f4f8" text-anchor="middle">VAPID · APNs</text>
+
+  <!-- arrows: devices -> hono -->
+  <line x1="262" y1="150" x2="443" y2="180" stroke="#4a6878" stroke-width="2.5" marker-end="url(#arw)"/>
+  <text x="300" y="150" font-size="12" font-weight="700" fill="#4a6878">HTTPS + token</text>
+  <line x1="262" y1="350" x2="443" y2="235" stroke="#4a6878" stroke-width="2.5" marker-end="url(#arw)"/>
+  <text x="300" y="316" font-size="12" font-weight="700" fill="#4a6878">HTTPS + token</text>
+
+  <!-- hono <-> sqlite -->
+  <line x1="580" y1="285" x2="580" y2="308" stroke="#1a3c50" stroke-width="2.5" marker-end="url(#arw)"/>
+
+  <!-- hono -> web push -->
+  <line x1="717" y1="200" x2="788" y2="205" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#arwT)"/>
+  <text x="720" y="192" font-size="11.5" font-weight="700" fill="#1d7268">notify</text>
+
+  <!-- web push -> devices (notifications) -->
+  <path d="M792 160 C700 40, 300 20, 190 66" stroke="#2a9d8f" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arwT)"/>
+  <text x="470" y="34" font-size="12" font-weight="700" fill="#1d7268">push notification (both directions)</text>
+  <path d="M840 260 C820 420, 340 470, 262 405" stroke="#2a9d8f" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arwT)"/>
+</svg>

@@ -1,0 +1,5 @@
+.superpowers/
+node_modules/
+data.db*
+dist/
+dist-server/

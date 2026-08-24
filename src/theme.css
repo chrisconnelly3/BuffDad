@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-teal: #2a9d8f;
+  --color-navy: #1a3c50;
+  --color-cream: #fdf6e3;
+  --color-sky: #e8f4f8;
+  --color-sand: #e8d9b5;
+  --color-muted: #4a6878; /* AA on white and on the sky/cream gradient */
+  --color-teal-deep: #1d7268; /* AA text-on-white flavor of teal */
+}
+
+/* Native-app feel: the document itself can't scroll, so iOS has no page to rubber-band;
+   the app scrolls inside #root instead (inner-scroller pattern). */
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+
+/* keyboard / switch users get an unmissable ring; taps never see it */
+:focus-visible { outline: 3px solid var(--color-teal); outline-offset: 2px; }
+@keyframes splash-fade { to { opacity: 0 } }
+
+/* Finish screen: beach bubbles drifting up behind the headline. Invisible unless motion is OK. */
+@keyframes bubble-rise {
+  0% { transform: translateY(0) scale(1); opacity: 0 }
+  15% { opacity: .8 }
+  80% { opacity: .8 }
+  100% { transform: translateY(-14rem) scale(1.2); opacity: 0 }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bubble { animation: bubble-rise var(--dur, 7s) linear infinite; animation-delay: var(--delay, 0s); }
+}
+body {
+  background: linear-gradient(180deg, var(--color-sky), var(--color-cream));
+  color: var(--color-navy);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* the one scroll surface; the gradient behind it stays put like a native backdrop */
+#root {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-server
+.git
+docs
+.superpowers
+.claude
+data.db*
+loading_screen.png
+*.md
